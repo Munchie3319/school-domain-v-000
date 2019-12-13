@@ -1,22 +1,32 @@
 # code here!
-school = School.new ("Bayside High School")
+class School
+  
+def initialize(school_name)
+  @school_name = school_name
+  @roster = {}
+end
 
-school.roster
+def roster
+  @roster
+end
 
-school.add student("Zach Morris", 9)
-school.roster
 
-hash ["new key"] = []
-hash ["new_key"] <<
-"new_value_for_value_array"
+def add_student)name, grade)
+  if @roster[grade] != nil
+    @roster[grade] << name
+  else
+    @roster[grade] = [ ]
+    @roster[grade] << name
+  end
+end
 
-Hash
-=> {"new_key" => ["new_value_for_value_array"]}
+def grade(grade)
+    @roster[grade]
+  end
 
-school.add_student("AC Slater", 9)
-school.add_student("Kelly Kapowski", 10)
-school.add_student("Screech", 11)
-school.roster
-
-school.grade(9)
-school.sort
+def sort
+  @roster.each do |grade, name|
+    name.sort!
+  end
+end
+end
